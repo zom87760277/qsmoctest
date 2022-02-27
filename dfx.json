@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dfx": "0.8.4",
+  "canisters": {
+    "qsmoctest": {
+      "type": "motoko",
+      "main": "src/qsmoctest/main.mo"
+    },
+    "qsmoctest_assets": {
+      "type": "assets",
+      "source": [
+        "src/qsmoctest_assets/assets"
+      ],
+      "dependencies": [
+        "qsmoctest"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
